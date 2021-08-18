@@ -885,4 +885,12 @@ details p {
         width: 100%;
         margin-left: 17.5%;
     }
+
+    .result-list-container {
+        flex-direction: column;
+    }
+
+    .result-list-container figure {
+        width: 100%;
+    }
 }
