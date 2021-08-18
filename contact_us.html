@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/tab-icon.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <a href="index.html">
+                <img class="logo" src="images/logo.png" alt="the logo of LIFE, representing live it fully everyday">
+            </a>
+            <div class="nav-bar">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="services.html" class="nav-item">Services</a>
+                <a href="covid-19_resources.html" class="nav-item">COVID-19 Resources</a>
+                <a href="contact_us.html" class="nav-item">Contact Us</a>
+                <a href="site_map.html" class="nav-item">Site Map</a>
+            </div>
+            <div class=nav-toggle>
+                <span class="hamburger"></span>
+            </div>
+            <a href="registration.html" class="register-link">
+                <figure class="register">
+                    <div class="register-icon">
+                        <div class="register-top"></div>
+                        <div class="register-bottom"></div>
+                    </div>
+                    <figcaption>Register Here</figcaption>
+                </figure>
+            </a>
+        </header>
+        <main>
+            <h1 class="header">Contact Us</h1>
+            <p class="header">Thank you for trying to reach out to us! Fill out the form below and we will get back to you in no time!</p>
+            <form class="contact-form" action="mailto:LIFE@localcouncil.com" method="post" enctype="text/plain">
+                <div class="input-container">
+                    <label for="first-name">*First Name: </label>
+                    <input class="text" type="text" id="first-name" name="first-name" placeholder="enter first name" value="" pattern="[A-Za-z0-9 ]+" required>
+                </div>
+                <p class="alert" id="first-name-alert">Please enter a valid first name.</p>
+                <p class="alert" id="first-name-required">Your first name is required.</p>
+                <div class="input-container">
+                    <label for="last-name">*Last Name: </label>
+                    <input class="text" type="text" id="last-name" name="last-name" placeholder="enter last name" value="" pattern="[A-Za-z0-9 ]+" required>
+                </div>
+                <p class="alert" id="last-name-alert">Please enter a valid last name.</p>
+                <p class="alert" id="last-name-required">Your last name is required.</p>
+                <div class="input-container">
+                    <label for="address">Address: </label> 
+                    <input class="text" type="text" id="address" name="address" placeholder="enter address (optional)" value="">
+                </div>
+                <div class="input-container">
+                    <label for="email">*Email: </label>
+                    <input class="text" type="email" id="email" name="email" placeholder="enter email" value="" required>
+                </div>
+                <p class="alert" id="email-alert">Please enter a valid email address.</p>
+                <p class="alert" id="email-required">Your email is required.</p>
+                <label for="enquiry">*Enquiry: </label> 
+                <br>
+                <p class="alert" id="enquiry-required">Your enquiry is required.</p>
+                <textarea id="enquiry" name="enquiry" placeholder="what do you want to say to us?" value="" required></textarea>
+                <input class="submit" type="submit" value="submit">
+            </form>
+            <div id="blocker"></div>
+            <div class="form-complete-popup">
+                <h2 class="header">Thank you for reaching out to us!</h2>
+                <h2 class="header">We will get back to you soon!</h2>
+                <a href="index.html"><p class="header">Back to L.I.F.E.</p></a>
+            </div>
+            <h4 class="slogan"><em>"Live It Fully Everyday."</em></h4>
+        </main>
+        <footer>
+            <a href="contact_us.html">
+                <figure class="contact-icon">
+                    <img src="images/contact-form.png" alt="a contact us icon that leads to contact form">
+                    <figcaption>contact us</figcaption>
+                </figure>
+            </a>
+            <p>attribute:</p>
+            <p>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+        </footer>
+        <script type="module" src="contact_us.js"></script>
+    </body>
+</html>

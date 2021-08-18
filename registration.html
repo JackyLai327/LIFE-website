@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/tab-icon.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <a href="index.html">
+                <img class="logo" src="images/logo.png" alt="the logo of LIFE, representing live it fully everyday">
+            </a>
+            <div class="nav-bar">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="services.html" class="nav-item">Services</a>
+                <a href="covid-19_resources.html" class="nav-item">COVID-19 Resources</a>
+                <a href="contact_us.html" class="nav-item">Contact Us</a>
+                <a href="site_map.html" class="nav-item">Site Map</a>
+            </div>
+            <div class=nav-toggle>
+                <span class="hamburger"></span>
+            </div>
+            <a href="registration.html" class="register-link">
+                <figure class="register">
+                    <div class="register-icon">
+                        <div class="register-top"></div>
+                        <div class="register-bottom"></div>
+                    </div>
+                    <figcaption>Register Here</figcaption>
+                </figure>
+            </a>
+        </header>
+        <main>
+            <h1 class="header">Registration</h1>
+            <p class="header">Register below to secure your membership and enjoy our unlimited and exclusive services.</p>
+            <p class="header">What's the better time to start living it fully everyday than now?</p>
+            <form id="registration-form" action="mailto:LIFE@localcouncil.com" method="post" enctype="text/plain">
+                <div class="registration-container">
+                    <label for="register-first-name">*First Name:</label>
+                    <input class="textbox" type="text" id="register-first-name" name="fistName" placeholder="enter first name" value="">
+                </div>
+                <p class="alert regform" id="first-name-alert">Please enter a valid first name.</p>
+                <p class="alert regform" id="first-name-required">Your first name is required.</p>
+                <div class="registration-container">
+                    <label for="register-last-name">*Last Name:</label>
+                    <input class="textbox" type="text" id="register-last-name" name="lasName" placeholder="enter last name" value="">
+                </div>
+                <p class="alert regform" id="last-name-alert">Please enter a valid last name.</p>
+                <p class="alert regform" id="last-name-required">Your last name is required.</p>
+                <div class="registration-container">
+                    <label for="register-email">*Email:</label>
+                    <input class="textbox" type="text" id="register-email" name="email" placeholder="enter email" value="">
+                </div>
+                <p class="alert regform" id="email-alert">Please enter a valid email.</p>
+                <p class="alert regform" id="email-required">Your email is required.</p>
+                <div class="registration-container">
+                    <label for="register-email-confirm">*Confirm-Email</label>
+                    <input class="textbox" type="text" id="register-email-confirm" name="emailConfirm" placeholder="enter email again" value="">
+                </div>
+                <p class="alert regform" id="email-confirm-alert">Your emails don't match.</p>
+                <p class="alert regform" id="email-confirm-required">Your email confirm is required.</p>
+                <div class="registration-container">
+                    <label for="register-phone">*Phone Number:</label>
+                    <input class="textbox" type="text" id="register-phone" name="phone" placeholder="enter phone number" value="">
+                </div>
+                <p class="alert regform" id="phone-alert">Please enter a valid phone.</p>
+                <p class="alert regform" id="phone-required">Your phone is required.</p>
+                <div class="registration-container">
+                    <label for="register-age">*Age:</label>
+                    <input class="range" type="range" id="register-age" name="age" min="16" max="120" step="1" value="120">
+                    <span><p id="display-age">120</p></span>
+                </div>
+                <p class="alert regform" id="age-required">Your age is required.</p>
+                <div class="registration-container">
+                    <p>*Are you a student?</p>
+                    <label for="register-student-yes">Yes</label>
+                    <input class="radio" type="radio" id="register-student-yes" name="student" value="yes">
+                    <label for="register-student-no">No</label>
+                    <input class="radio" type="radio" id="register-student-no" name="student" value="no">
+                </div>
+                <p class="alert regform" id="student-status-required">Please pick one.</p>
+                <div class="registration-container">
+                    <label for="register-employed">Employed</label>
+                    <input class="radio" type="radio" id="register-employed" name="employment" value="employed">
+                    <label for="register-unemployed">Unemployed</label>
+                    <input class="radio" type="radio" id="register-unemployed" name="employment" value="unemployed">
+                </div>
+                <p class="alert regform" id="employment-required">Please pick one.</p>
+                <p>
+                    <hr>
+                </p>
+                <div class="registration-container">
+                    <p>Annual membership fee:</p>
+                    <span><p id="annual-fee">$120.00</p></span>
+                </div>
+                <div class="registration-container">
+                    <input class="submit" type="submit" id="submit-btn" value="Register">
+                </div>
+            </form>
+            <div id="blocker"></div>
+            <div class="form-complete-popup">
+                <h2 class="header">Your registration is completed.</h2>
+                <h2 class="header">Start living it fully today!</h2>
+                <a href="index.html"><p class="header">Back to L.I.F.E.</p></a>
+            </div>
+            <h4 class="slogan"><em>"Live It Fully Everyday."</em></h4>
+        </main>
+        <footer>
+            <a href="contact_us.html">
+                <figure class="contact-icon">
+                    <img src="images/contact-form.png" alt="a contact us icon that leads to contact form">
+                    <figcaption>contact us</figcaption>
+                </figure>
+            </a>
+            <p>attribute:</p>
+            <p>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+        </footer>
+        <script type="module" src="registration.js"></script>
+    </body>
+</html>

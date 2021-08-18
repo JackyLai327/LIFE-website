@@ -1,0 +1,888 @@
+/* imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* variables: clr => colours, ff => font family*/
+
+:root {
+    --clr-base-green: #cff3e0;
+    --clr-base-green-trans: #e0f5e970;
+    --clr-base-blue: #eafbfd;
+    --clr-primary-green: #3d694f;
+    --clr-primary-green-trans: #437557e1;
+    --clr-primary-blue: #20585B;
+    --clr-accent: #1D320B;
+    --ff--primary: 'Nunito', sans-serif;
+}
+
+/* configs */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+hr {
+    border: none;
+    border-bottom: var(--clr-primary-green) solid 1px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input,
+label {
+    font-size: 18px;
+}
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+body {
+    font-family: var(--ff--primary);
+}
+
+main {
+    background-color: var(--clr-base-blue);
+    margin: 0 auto;
+    padding: 8em;
+    color: var(--clr-primary-green);
+}
+
+footer {
+    margin: 0 auto;
+    padding: 3em 8em;
+    color: var(--clr-primary-blue)
+}
+
+footer p {
+    font-size: 15px;
+    margin: 0.25em;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p,
+li {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 18px;
+}
+
+h1, 
+h2 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* nav bar styling*/
+
+.nav-bar {
+    right: 0;
+    left: 0;
+    background-color: var(--clr-base-green);
+    margin: 0;
+    padding: 4.25em 5em 1em 0;
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    transform: translateX(120%);
+    transition: transform 500ms ease-in-out;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    margin: 1em 1em 0 1em;
+    text-align: center;
+}
+
+.nav-item,
+.nav-item:link {
+    text-decoration: none;
+    color: var(--clr-primary-accent);
+    font-size: 1.125rem;
+}
+
+.nav-item:hover {
+    text-shadow: .25em .25em .5em var(--clr-primary-blue);
+}
+
+.nav-item:active {
+    text-shadow: .25em .25em var(--clr-primary-blue);
+    color: transparent;
+}
+
+/* hamburger icon */
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background-color: var(--clr-accent);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 500ms ease-in-out;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before { top: 6px; }
+.hamburger::after { bottom: 6px; }
+
+.nav-toggle {
+    padding: .5em;
+    background: transparent;
+    cursor: pointer;
+    position: fixed;
+    right: 2.75em;
+    top: 5.5em;
+    z-index: 10000;
+}
+
+
+/* nav collapse animation */
+
+.nav-open .nav-bar{
+    transform: translateX(0);
+}
+
+.nav-open .hamburger {
+    transform: rotate(225deg);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--clr-base-green);
+}
+
+
+/* logo & slogan*/
+
+.logo {
+    width: 7em;
+    height: 7em;
+    position: fixed;
+    z-index: 1000;
+}
+
+.slogan {
+    position: relative;
+    text-align: right;
+    margin: 2em -5em -7em 2em;
+}
+
+/* contact form icon */
+
+.contact-icon {
+    position: fixed;
+    bottom: 1em;
+    left: 1.5em;
+}
+
+.contact-icon img{
+    width: 4em;
+}
+
+.contact-icon figcaption {
+    color: var(--clr-primary-blue);
+    text-align: left;
+}
+
+/* header picture */
+.header-pic {
+    width: 80%;
+    margin-left: 10%
+}
+
+.header-pic img {
+    width: 100%;
+}
+
+.header-pic figcaption {
+    font-size: 15px;
+    text-align: right;
+}
+
+.header {
+    text-align: center;
+}
+
+/* services list */
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.service-thumb figcaption {
+    text-align: right;
+    font-size: 12px;
+}
+
+.service-thumb {
+    width: 40%;
+    margin-bottom: 1em;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.service-thumb h2 {
+    text-align: center;
+}
+
+.service-thumb img {
+    width: 100%;
+    border-radius: 1em;
+}
+
+/* services portal button */
+
+
+.back-icon-bottom,
+.back-icon-top {
+    position: relative;
+    width: 2em;
+    height: 6px;
+    background-color: var(--clr-primary-green);
+    border-radius: 1em;
+}
+
+.back-icon-top {
+    transform: translateX(-.5em) rotate(30deg);
+}
+
+.back-icon-bottom {
+    transform: translateX(-.5em) translateY(-1.2em) rotate(155deg);
+}
+
+.service-portal {
+    text-decoration: none;
+    color: inherit;
+    position: fixed;
+    left: 1em;
+    top: 12em;
+}
+
+.service-portal figcaption {
+    padding-top: .5em;
+    position: fixed;
+    top: 14.5em;
+    color:var(--clr-accent);
+}
+
+.back-icon {
+    padding: 2em;
+}
+
+/* yoga */
+
+.tutorial {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.tutorial video{
+    width: 70%;
+    margin-left: 30%
+}
+
+.tutorial figcaption {
+    text-align: left;
+    font-size: 15px;
+    text-align: right;
+}
+
+/* meditation */
+
+.tutorial.meditation {
+    margin-left: -45%;
+}
+
+/* breathing */
+
+.tutorial.breathing {
+    margin-left: -45%;
+}
+
+/* COVID-19 Resources */
+
+.resources-container {
+    display:flex;
+    justify-content: space-around;
+    margin-bottom: 5em;
+}
+
+.resources,
+.resources:link {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+}
+
+.resources:hover {
+    text-shadow: 0.2em 0.2em 0.5em var(--clr-accent);
+}
+
+.resources:active {
+    text-shadow: 0.2em 0.2em 0 var(--clr-accent);
+    color: transparent;
+}
+
+/* references */
+
+.reference-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reference-container p {
+    width: 10em;
+}
+
+/* contact form */
+
+.input-container {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.contact-form {
+    margin-left: 30%;
+    font-size: 18px;
+}
+
+.contact-form input{
+    width: 65%;
+    height: 2em;
+    font-size: 18px;
+}
+
+.contact-form textarea {
+    width: 60%;
+    height: 5em;
+    resize: vertical;
+    margin-top: 1em;
+    font-family: inherit;
+    font-size: 18px;;
+}
+
+.contact-form .submit{
+    margin-top: 2em;
+    width: 60%;
+    background-color: var(--clr-base-green);
+    color: var(--clr-accent);
+    border-radius: 2em;
+    cursor: pointer;
+    border: 1px var(--clr-accent) solid;
+    align-items: center;
+    font-size: 20px;
+}
+
+/* alert messages */
+
+.alert {
+    color: rgb(255, 0, 0);
+    display: none;
+}
+
+.alert.show {
+    display: block;
+}
+
+/* site map */
+
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.category a,
+.category a:visited {
+    color: inherit;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.category a:hover {
+    text-shadow: 0.2em 0.2em 0.5em var(--clr-accent);
+}
+
+.category a:active {
+    text-shadow: .2em .2em 0 var(--clr-accent);
+    color: transparent;
+}
+
+/* register icon */
+
+.register {
+    position: fixed;
+    top: 3.25em;
+    right: 1em;
+    z-index: 500;
+}
+
+.register-bottom, 
+.register-top {
+    background-color: var(--clr-base-green);
+    border: black 2px solid;
+}
+
+.register-top {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: fixed;
+    top: 1em;
+    right: 3.9em;
+}
+
+.register-bottom {
+    width: 1.25em;
+    height: 1.25em;
+    border-radius: 50% 50% 0 0;
+    position: fixed;
+    top: 1.9em;
+    right: 3.75em;
+}
+
+.register-link {
+    text-decoration: none;
+    color:inherit;
+}
+
+/* registration form */
+
+.registration-container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.registration-container input {
+    width: 50%;
+    margin-top: 1em;
+}
+
+.registration-container label {
+    font-size: 18px;
+    margin-top: 1em;
+}
+
+.registration-container p {
+    width: 150%;
+    font-size: 18px;
+    margin: 0;
+    margin-top: 1em;
+}
+
+.registration-container .radio {
+    margin-top: 1.3em;
+}
+
+.registration-container .range {
+    margin-top: 1.5em;
+}
+
+.registration-container .submit {
+    background-color: var(--clr-base-green);
+    padding: .25em;
+    border-radius: 2em;
+    margin-top: 2em;
+    width: 100%;
+    font-size: 20px;
+    color: var(--clr-accent);
+    font-family: inherit;
+    cursor: pointer;
+    border: 1px var(--clr-accent) solid;
+}
+
+.regform.alert {
+    margin-left: 25%;
+}
+
+input[type='range'] {
+    overflow: hidden;
+    -webkit-appearance: none;
+    background-color: var(--clr-base-blue);
+    border: 1px var(--clr-accent) solid;
+    border-radius: 1em;
+    height: 1.5em;
+}
+  
+input[type='range']::-webkit-slider-runnable-track {
+height: 1.4em;
+-webkit-appearance: none;
+color: var(--clr-accent);
+}
+
+input[type='range']::-webkit-slider-thumb {
+width: 1.4em;
+-webkit-appearance: none;
+height: 1.4em;
+cursor: ew-resize;
+background: var(--clr-accent);
+box-shadow: -210px 0 0 200px var(--clr-base-green);
+border-radius: 1em;
+}
+
+#blocker.show{
+    background-color: rgba(0, 0, 0, 0.822);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* pop up widow */
+
+.form-complete-popup {
+    position: fixed;
+    background: var(--clr-base-green);
+    bottom: -80%;
+    left: 12.5%;
+    width: 75%;
+    padding: 2em 0 2em 0;
+    border: var(--clr-accent) 1px solid;
+    color: var(--clr-primary-blue);
+}
+
+.form-complete-popup.completed {
+    transform: translateY(-220%);
+    transition: transform 400ms ease-in-out;
+}
+
+.form-complete-popup a,
+.form-complete-popup a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.form-complete-popup a:hover {
+    text-shadow: .2em .2em .2em var(--clr-accent);
+}
+
+.form-complete-popup a:active {
+    text-shadow: .2em .2em .0 var(--clr-primary-blue);
+    color: transparent;
+}
+
+.form-complete-popup a p {
+    margin-top: 5em;
+    font-size: 20px;
+}
+
+/* meal planner */
+
+summary {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+details p {
+    background-color: var(--clr-base-green);
+    padding: 2em;
+}
+
+.diet-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+.diet {
+    width: 20%;
+    cursor: pointer;
+}
+
+.diet img {
+    width: 80%;
+    display: block;
+    border: solid 2px var(--clr-accent);
+    border-radius: 1em;
+    margin-left: .5em;
+    padding: .5em;
+}
+
+.diet figcaption {
+    text-align: center;
+    margin-top: .5em;
+}
+
+.selected img {
+    border: solid .5em rgb(42, 99, 89);
+    box-shadow: .2em .2em .2em black;
+}
+
+.result {
+    background-color: var(--clr-base-green);
+}
+
+.result h1 {
+    padding-top: 1em;
+    margin-bottom: -2em;
+}
+
+.no-result {
+    margin: 3em 2.5em 0 2.5em;
+}
+
+.button {
+    height: 2em;
+    margin: 1em 1em 1em auto;
+    background-color: var(--clr-base-green);
+    border: 1px solid var(--clr-accent);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.start.hide {
+    display: none;
+}
+
+.result-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.result-list-container figure {
+    width: 30%;
+    margin-bottom: 2em;
+}
+
+.result-list-container figure img { 
+    width: 100%;
+}
+/* responsive screen sizes */
+
+@media all and (max-width: 1150px) {
+    .input-container {
+        width: 80%;
+    }
+
+    .contact-form {
+        margin-left: 20%;
+    }
+
+    .contact-form textarea,
+    .contact-form .submit {
+        width: 80%;
+    }
+
+@media all and (max-width: 840px) {
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: -3em; 
+    }
+
+    .service-thumb {
+        width: 100%;
+    }
+
+    .input-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact-form textarea,
+    .contact-form .submit {
+        width: 65%;
+    }
+
+    .contact-form {
+        margin-left: 25%;
+    }
+
+    .registration-container {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+}
+
+@media all and (max-width: 800px) {
+    .logo {
+        width: 5em;
+        height: 5em;
+        position: fixed;
+        bottom: 1em;
+        right: 1em;
+    }
+
+    .contact-icon img{
+        width: 3em;
+    }
+
+    .contact-icon figcaption {
+        font-size: 13px;
+    }
+
+    .header-pic{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .register {
+        left: 1em;
+    }
+
+    .register-top {
+        left: 3.6em;
+    }
+
+    .register-bottom {
+        left: 3.51em;
+    }
+}
+
+
+@media all and (max-width: 720px) {
+    .nav-bar {
+        flex-direction: column;
+        bottom: 0;
+        top: 0;
+        justify-content: space-around;
+        background-color: var(--clr-primary-green-trans);
+        color: var(--clr-base-blue);
+        text-shadow: .1em .1em .5em var(--clr-accent);
+    }
+
+    .nav-open .nav-item {
+        font-size: 30px;
+        text-align: left;
+    }
+    
+    .nav-toggle {
+        top: 2em;
+        right: 2em;
+    }
+
+    main {
+        padding-top: 3em;
+    }
+
+    .service-portal {
+        top: 1em;
+    }
+
+    .service-portal figcaption {
+        top: 3.5em;
+    }
+
+    .categories-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category {
+        margin: 2em 0 2em 0;
+    }
+}
+
+@media all and (max-width: 650px) {
+    .header-pic {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    main {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    .slogan {
+        margin-right: -3em;
+    }
+
+    .tutorial.breathing video,
+    .tutorial.meditation video {
+        width: 140%;
+        margin-left: -10%;
+    }
+
+    .tutorial figcaption {
+        margin-right: -10%;
+    }
+}
+
+@media all and (max-width: 530px) {
+    .header-pic {
+        width: 140%;
+        margin-left: -22.5%
+    }
+    .header-pic figcaption {
+        margin-right: 1em;
+    }
+
+    .tutorial.yoga video {
+        width: 138%;
+        margin-left: -20%;
+    }
+
+    .resources-container {
+        flex-direction: column;
+    }
+
+    .resources {
+        margin-bottom: 2em;
+    }
+
+    .contact-form {
+        width: 100%;
+        margin-left: 17.5%;
+    }
+}

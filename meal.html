@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Meal Planner</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/tab-icon.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <a href="index.html">
+                <img class="logo" src="images/logo.png" alt="the logo of LIFE, representing live it fully everyday">
+            </a>
+            <div class="nav-bar">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="services.html" class="nav-item">Services</a>
+                <a href="covid-19_resources.html" class="nav-item">COVID-19 Resources</a>
+                <a href="contact_us.html" class="nav-item">Contact Us</a>
+                <a href="site_map.html" class="nav-item">Site Map</a>
+            </div>
+            <div class=nav-toggle>
+                <span class="hamburger"></span>
+            </div>
+            <a href="registration.html" class="register-link">
+                <figure class="register">
+                    <div class="register-icon">
+                        <div class="register-top"></div>
+                        <div class="register-bottom"></div>
+                    </div>
+                    <figcaption>Register Here</figcaption>
+                </figure>
+            </a>
+        </header>
+        <main>
+            <h1 class="header">Meal Planner</h1>
+            <p>Don't know what to eat in order to stay healthy? Let us help you.</p>
+            <p>Choose your diet type and desired calories to absorb, we will suggest you with healthy meals for the day.</p>
+            <p>Don't know how much calories you need? Click view more below to see suggested calories for you.</p>
+            <details>
+                <summary>view more</summary>
+                <p>Suggested intake of calories per day for common cases: 2500cal for men, and 2000cal for women. For more details on calories intake, visit <a href="https://www.nhs.uk/common-health-questions/food-and-diet/what-should-my-daily-intake-of-calories-be/"> >HERE< </a> for more information.</p>
+            </details>
+            <div class="diet-container">
+                <figure class="diet" id="meat" in="anythingList">
+                    <img src="images/meat.png" alt="an icon of a chicken drumstick" class="diet-icon">
+                    <figcaption>Anything</figcaption>
+                </figure>
+                <figure class="diet" id="veggie" in="vegetarianList">
+                    <img src="images/veggie.png" alt="an icon of an apple, a carrot, and an avocado" class="diet-icon">
+                    <figcaption>Vegetarian</figcaption>
+                </figure>
+                <figure class="diet" id="vegan" in="veganList">
+                    <img src="images/vegan.png" alt="an icon that says 100 percent veggie with leaves" class="diet-icon">
+                    <figcaption>Vegan</figcaption>
+                </figure>
+                <figure class="diet" id="ketogenic" in="ketogenicList">
+                    <img src="images/egg.png" alt="an icon of an egg slides in half" class="diet-icon">
+                    <figcaption>Ketogenic</figcaption>
+                </figure>
+            </div>
+            <label for="">Calories planning to absorb:</label>
+            <input id="calories" type="text" class="calories" placeholder="enter a number" value="">
+            <br>
+            <button class="start button">Start planning</button>
+            <button class="reset button">Reset</button>
+            <div class="result header">
+                <h1 class="header">Your Meal Plan</h1>
+                <h2 class="header no-result">There's no result at the moment..., check out  <a href="https://www.calories.info/">>HERE<</a>  for more calories information.</h2>
+                <p class="header">Total calories: <span class="total-calories">#</span>cal</p>
+                <hr>
+                <h2 class="meal">Breakfast</h2> 
+                <p class="header">calories: <span class="breakfast-calories">#</span>cal</p>
+                <div class="result-list-container breakfast"></div>
+                <hr>
+                <h2 class="meal">Lunch</h2>
+                <p class="header">calories: <span class="lunch-calories">#</span>cal</p>
+                <div class="result-list-container lunch"></div>
+                <hr>
+                <h2 class="meal">Dinner</h2>
+                <p class="header">calories: <span class="dinner-calories">#</span>cal</p>
+                <div class="result-list-container dinner"></div>
+            </div>
+            <h4 class="slogan"><em>"Live It Fully Everyday."</em></h4>
+        </main>
+        <footer>
+            <a href="contact_us.html">
+                <figure class="contact-icon">
+                    <img src="images/contact-form.png" alt="a contact us icon that leads to contact form">
+                    <figcaption>contact us</figcaption>
+                </figure>
+            </a>
+            <p>attribute:</p>
+            <p>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+        </footer>
+        <script type="module" src="meal.js"></script>
+    </body>
+</html>
