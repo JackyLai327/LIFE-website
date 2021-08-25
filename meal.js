@@ -399,19 +399,19 @@ const calculateAnything = (desiredCal) => {
     let calLunch = 0;
     let calDinner =0;
     let index, randomFood;
-    while (calBreakfast < desiredCal*(3/10)) {
+    while (calBreakfast < desiredCal*(3/10) - 100) {
         index = Math.floor(Math.random() * anythingList.length);
         randomFood = anythingList[index];
         document.querySelector(".result-list-container.breakfast").insertAdjacentHTML("beforeend", randomFood.displayResult);
         calBreakfast += randomFood.calories;
     }
-    while (calLunch < desiredCal*(4/10)) {
+    while (calLunch < desiredCal*(4/10) - 100) {
         index = Math.floor(Math.random() * anythingList.length);
         randomFood = anythingList[index];
         document.querySelector(".result-list-container.lunch").insertAdjacentHTML("beforeend", randomFood.displayResult);
         calLunch += randomFood.calories;
     }
-    while (calDinner < desiredCal*(3/10)) {
+    while (calDinner < desiredCal*(3/10) - 100) {
         index = Math.floor(Math.random() * anythingList.length);
         randomFood = anythingList[index];
         document.querySelector(".result-list-container.dinner").insertAdjacentHTML("beforeend", randomFood.displayResult);
@@ -432,19 +432,19 @@ const calculateVegetarian = (desiredCal) => {
     let calLunch = 0;
     let calDinner =0;
     let index, randomFood;
-    while (calBreakfast < desiredCal*(3/10)) {
+    while (calBreakfast < desiredCal*(3/10) - 100) {
         index = Math.floor(Math.random() * vegetarianList.length);
         randomFood = vegetarianList[index];
         document.querySelector(".result-list-container.breakfast").insertAdjacentHTML("beforeend", randomFood.displayResult);
         calBreakfast += randomFood.calories;
     }
-    while (calLunch < desiredCal*(4/10)) {
+    while (calLunch < desiredCal*(4/10) - 100) {
         index = Math.floor(Math.random() * vegetarianList.length);
         randomFood = vegetarianList[index];
         document.querySelector(".result-list-container.lunch").insertAdjacentHTML("beforeend", randomFood.displayResult);
         calLunch += randomFood.calories;
     }
-    while (calDinner < desiredCal*(3/10)) {
+    while (calDinner < desiredCal*(3/10) - 100) {
         index = Math.floor(Math.random() * vegetarianList.length);
         randomFood = vegetarianList[index];
         document.querySelector(".result-list-container.dinner").insertAdjacentHTML("beforeend", randomFood.displayResult);
@@ -465,19 +465,19 @@ const calculateVegan = (desiredCal) => {
     let calLunch = 0;
     let calDinner =0;
     let index, randomFood;
-    while (calBreakfast < desiredCal*(3/10)) {
+    while (calBreakfast < desiredCal*(3/10) - 100) {
         index = Math.floor(Math.random() * veganList.length);
         randomFood = veganList[index];
         document.querySelector(".result-list-container.breakfast").insertAdjacentHTML("beforeend", randomFood.displayResult);
         calBreakfast += randomFood.calories;
     }
-    while (calLunch < desiredCal*(4/10)) {
+    while (calLunch < desiredCal*(4/10) - 100) {
         index = Math.floor(Math.random() * veganList.length);
         randomFood = veganList[index];
         document.querySelector(".result-list-container.lunch").insertAdjacentHTML("beforeend", randomFood.displayResult);
         calLunch += randomFood.calories;
     }
-    while (calDinner < desiredCal*(3/10)) {
+    while (calDinner < desiredCal*(3/10) - 100) {
         index = Math.floor(Math.random() * veganList.length);
         randomFood = veganList[index];
         document.querySelector(".result-list-container.dinner").insertAdjacentHTML("beforeend", randomFood.displayResult);
@@ -498,19 +498,19 @@ const calculateKetogenic = (desiredCal) => {
     let calLunch = 0;
     let calDinner =0;
     let index, randomFood;
-    while (calBreakfast < desiredCal*(3/10)) {
+    while (calBreakfast < desiredCal*(3/10) - 150) {
         index = Math.floor(Math.random() * ketogenicList.length);
         randomFood = ketogenicList[index];
         document.querySelector(".result-list-container.breakfast").insertAdjacentHTML("beforeend", randomFood.displayResult);
         calBreakfast += randomFood.calories;
     }
-    while (calLunch < desiredCal*(4/10)) {
+    while (calLunch < desiredCal*(4/10) - 150) {
         index = Math.floor(Math.random() * ketogenicList.length);
         randomFood = ketogenicList[index];
         document.querySelector(".result-list-container.lunch").insertAdjacentHTML("beforeend", randomFood.displayResult);
         calLunch += randomFood.calories;
     }
-    while (calDinner < desiredCal*(3/10)) {
+    while (calDinner < desiredCal*(3/10) - 150) {
         index = Math.floor(Math.random() * ketogenicList.length);
         randomFood = ketogenicList[index];
         document.querySelector(".result-list-container.dinner").insertAdjacentHTML("beforeend", randomFood.displayResult);
